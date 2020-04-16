@@ -1,0 +1,10 @@
+echelle=(24-7)*1e-2/2538.639;
+data=open('data.csv');<
+diametre=echelle*data.data(:,end);
+z=-echelle*data.data(:,3);
+y=1./diametre.^4;
+linfitxy(z,y,0,0);
+q=0.167/11.9;
+K=8*q^2/pi^2/1000^2;
+g=58994953369.4491*K
+u_g=4076305393.0251*K
